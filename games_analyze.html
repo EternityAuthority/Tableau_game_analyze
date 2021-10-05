@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Export</title>
+    <script type="text/javascript" src="jquery.mmin.js"></script>
+    <script type="text/javascript" src="tableau_custom.js"></script>
+
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initViz();">
+    <header id="masthead" class="site-header" role="banner">
+        <div class="header-shadow"></div>
+        <div class="btn_div">
+            <button onclick="exportToPDF();" class="exp_btn">Export to PDF</button>
+            <button onclick="exportToCSV();" class="exp_btn">Export to CSV</button>
+            <button onclick="exportToExcel();" class="exp_btn">Export to Excel</button>
+            <button onclick="exportImage();" class="exp_btn">Export as Image</button>
+            <button onclick="exportPowerPoint();" class="exp_btn_big">Export to PowerPoint</button>
+            <button onclick="showDownloadDialog();" class="exp_btn_big">Show Download Dialog</button>
+        </div>
+        <div id="controls" style="padding:20px;position: relative; float: left;">
+            Genre: <select id="changeGenre" onchange="GenreFilter(value);">
+                <option value="">All</option>
+                <option value="Action">Action</option>
+                <option value="Action">Action-Adventure</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Board Game">Board Game</option>
+                <option value="Education">Education</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Misc">Misc</option>
+                <option value="MMO">MMO</option>
+                <option value="Music">Music</option>
+                <option value="Party">Party</option>
+                <option value="Platform">Platform</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Role-Playing">Role-Playing</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Racing">Racing</option>
+                <option value="Simulation">Simulation</option>
+                <option value="Sport">Sport</option>
+                <option value="Strategy">Strategy</option>
+
+            </select>
+        </div>
+        <div id="controls" style="padding:20px;position: relative; float: left;">
+            Metric: <select id="changeMetric" onchange="MetricFilter(value);">
+                <option value="Total Sales">Total Sales</option>
+                <option value="By Users Score">By Avg. Users Score</option>
+                <option value="By Critics Score">By Avg. Critics Score</option>
+
+            </select>
+        </div>
+
+    </header>
+
+    <div class='toggle'>
+        <div class='tabs'>
+            <div class='tab active'>Initial Dashboard</div>
+            <div class='tab'>Sales vs Shipped products</div>
+
+        </div>
+        <div class='panels'>
+            <div class='panel' id="vizContainer"></div>
+            <div class='panel' id="vizContainertwo"></div>
+        </div>
+
+    </div>
+    </div>
+    <!-- <div id="controls" style="padding:20px;">
+        Region: <select id="changeRegion" onchange="regionFilter(value);">
+            <option value="">All</option>
+            <option value="USA">USA</option>
+            <option value="EURO">EURO</option>
+            <option value="JAPAN">JAPAN</option>
+            <option value="OTHER">OTHER</option>
+            
+        </select>
+    </div> -->
+
+
+</body>
+
+</html>

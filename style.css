@@ -1,0 +1,57 @@
+.header-shadow{
+    background: url('Video-Game-Industry-background.jpg') no-repeat;
+    background-position: center;
+    height: 300px;
+    background-size: cover;
+}
+.btn_div{
+    margin-top: -31px;
+    
+}
+.tab-tooltip.tab-widget.tab-tooltipBR.tab-allowMouseEventPassthrough{
+    opacity: 0.1!important;
+    background-color: #dd4b39;
+}
+.exp_btn{
+    width: 120px;
+    height: 30px;
+}
+.exp_btn_big{
+    width: 160px;
+    height: 30px;
+}
+.toggle {
+    font-family: arial, sans-serif;
+}
+
+.toggle .tabs {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+    height: 36px;
+    line-height: 36px;
+}
+
+.toggle .tabs .tab {
+    float: left;
+    background: white;
+    color: #777777;
+    height: 31px;
+    margin: 2px 8px 0;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.toggle .tabs .tab.active {
+    color: #dd4b39;
+    border-bottom: 3px solid #dd4b39;
+}
+
+.toggle .panels .panel {
+    padding: 20px 10px;
+    display: none;
+}
+
+.toggle .panels .panel:first-child {
+    display: block;
+}
